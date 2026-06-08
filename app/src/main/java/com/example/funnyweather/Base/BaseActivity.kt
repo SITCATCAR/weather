@@ -11,9 +11,11 @@ abstract class BaseActivity<vb: ViewBinding>(val inflate:(LayoutInflater)->vb): 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        handleSystemUI()
         binding = inflate(layoutInflater)
         setContentView(binding.root)
     }
 
+    open fun handleSystemUI(){}
 
 }
